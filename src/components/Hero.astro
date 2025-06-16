@@ -1,0 +1,47 @@
+---
+import hero from "../assets/hero.jpg";
+---
+
+<div class="hero">
+  <h1>Привет, я Ирина, преподаватель испанского языка</h1>
+  <img
+    src={hero.src}
+    alt="Ирина, преподаватель испанского языка"
+    class="hero-image"
+  />
+  <p>
+    Живу в Испании и помогаю легко и с интересом освоить испанский для учебы,
+    работы и путешествий.
+  </p>
+</div>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    text-align: center;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    width: min(500px, 90vw);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+    max-width: 600px;
+  }
+
+  .hero-image {
+    border-radius: 25px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+</style>
