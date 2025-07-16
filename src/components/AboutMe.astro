@@ -28,39 +28,62 @@ import Download from "./icons/Download.astro";
       <h2>Образование</h2>
       <ul>
         <li>
-          <strong>Магистр прикладной лингвистики</strong>, Университет Виго,
-          Испания
+          <strong>Магистр прикладной лингвистики</strong>
+          <p>Университет Виго, Испания</p>
           <a
             href="https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            class="download-link"
           >
-            Диплом <Download />
+            <Download /> Диплом
           </a>
         </li>
         <li>
-          <strong>Переводчик испанского языка</strong>, ДВФУ, Россия
+          <strong>Переводчик испанского языка</strong>
+          <p>ДВФУ, Россия</p>
           <a
             href="https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            class="download-link"
           >
-            Диплом <Download />
+            <Download /> Диплом
           </a>
         </li>
       </ul>
     </div>
   </div>
-
-  <style>
-    section {
-      background-color: white;
-    }
-
-    .about-me-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-  </style>
 </section>
+
+<style>
+  .section-content {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  ul p {
+    margin: 0;
+  }
+
+  .about-me-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .download-link {
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+</style>

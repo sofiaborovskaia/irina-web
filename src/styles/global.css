@@ -8,7 +8,9 @@ body {
   font-weight: 400;
   font-style: normal;
 
-  background-image: linear-gradient(
+  background: #fff2b7;
+
+  /* background-image: linear-gradient(
     90deg,
     hsl(22deg 100% 42%) 0%,
     hsl(27deg 85% 48%) 11%,
@@ -25,7 +27,13 @@ body {
     hsl(42deg 100% 50%) 90%,
     hsl(37deg 100% 50%) 95%,
     hsl(32deg 100% 50%) 100%
-  );
+  ); */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 * {
@@ -34,6 +42,10 @@ body {
 
 h1 {
   line-height: 1.2;
+}
+
+h2 {
+  margin-top: 0;
 }
 
 section {
