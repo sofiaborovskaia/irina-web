@@ -1,21 +1,63 @@
-<section>
+---
+const { id = "contact" } = Astro.props;
+---
+
+<section id={id}>
   <div class="section-content">
     <h2>Контакты</h2>
-    <p>
-      Хотите записаться на занятия или у вас есть вопросы? Свяжитесь со мной
-      удобным для вас способом.
-    </p>
+    <p>Хотите записаться на занятия или у вас есть вопросы?</p>
     <ul>
       <li>
-        Email: <a href="mailto:irinainvigo@gmail.com">irinainvigo@gmail.com</a>
+        ✉️ Email: <a href="mailto:irinainvigo@gmail.com"
+          >irinainvigo@gmail.com</a
+        >
       </li>
 
-      <li>WhatsApp: <a href="https://wa.me/1234567890">+34 123 456 7890</a></li>
-      <li>Телефон</li>
+      <li>
+        ✅ WhatsApp: <a href="https://wa.me/1234567890">+34 123 456 7890</a>
+      </li>
+      <li>📞 Телефон: <a href="tel:+34123456789">+34 123 456 789</a></li>
+
+      <p class="mb-0">
+        Также можете связаться со мной заполнив форму ниже. Обычно я отвечаю в
+        течение 12 часов.
+      </p>
+
+      <iframe
+        data-tally-src="https://tally.so/embed/wAMDNB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+        loading="lazy"
+        width="100%"
+        height="200"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        title="Форма обратной связи"></iframe>
     </ul>
-    <p>
-      Оплата занятий ыозможна через банковский перевод как из России, так и
-      других стран.
-    </p>
   </div>
 </section>
+
+<style>
+  section {
+    background: white;
+    min-height: 100dvh;
+  }
+</style>
+
+<script>
+  var d = document,
+    w = "https://tally.so/widgets/embed.js",
+    v = function () {
+      "undefined" != typeof Tally
+        ? Tally.loadEmbeds()
+        : d
+            .querySelectorAll("iframe[data-tally-src]:not([src])")
+            .forEach(function (e) {
+              e.src = e.dataset.tallySrc;
+            });
+    };
+  if ("undefined" != typeof Tally) v();
+  else if (d.querySelector('script[src="' + w + '"]') == null) {
+    var s = d.createElement("script");
+    (s.src = w), (s.onload = v), (s.onerror = v), d.body.appendChild(s);
+  }
+</script>

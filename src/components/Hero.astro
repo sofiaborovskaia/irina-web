@@ -1,27 +1,42 @@
 ---
 import hero from "../assets/hero.jpg";
+import ShinyButton from "./ShinyButton.astro";
 ---
 
-<div class="hero">
-  <img
-    src={hero.src}
-    alt="Ирина, преподаватель испанского"
-    class="hero-image"
-  />
-  <div class="hero-text">
-    <h1>Привет, я Ирина, преподаватель испанского языка 🇪🇸</h1>
-    <p>
-      Живу в Испании и помогаю легко и с интересом освоить испанский язык. Мои
-      ученики успешно сдают экзамены DELE и SIELE, поступают в Испанские ВУЗы, а
-      также уверенно говорят на испанском в путешествиях и повседневной жизни.
-    </p>
+<section>
+  <div class="section-content">
+    <div class="hero-main">
+      <img
+        src={hero.src}
+        alt="Ирина, преподаватель испанского"
+        class="hero-image"
+      />
+      <div class="hero-text">
+        <h1>Привет, я Ирина, преподаватель испанского языка 🇪🇸</h1>
+        <p>
+          Живу в Испании и помогаю легко и с интересом освоить испанский язык.
+          Мои ученики успешно сдают экзамены DELE и SIELE, поступают в Испанские
+          ВУЗы, а также уверенно говорят на испанском в путешествиях и
+          повседневной жизни.
+        </p>
+      </div>
+    </div>
   </div>
-</div>
+  <ShinyButton />
+</section>
 
 <style>
-  .hero {
-    padding: 60px 40px;
+  section {
+    min-height: 100vh;
+    padding-block: 10px;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+
+  .hero-main {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,13 +47,13 @@ import hero from "../assets/hero.jpg";
     max-width: 500px;
   }
 
-  .hero h1 {
+  h1 {
     width: min(500px, 90vw);
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
   }
 
-  .hero p {
+  p {
     font-size: 1.25rem;
     max-width: 600px;
   }
@@ -48,5 +63,35 @@ import hero from "../assets/hero.jpg";
     width: 400px;
     height: 400px;
     object-fit: cover;
+  }
+
+  button.primary {
+    margin-block: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .hero-main {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-image {
+      width: 200px;
+      height: 200px;
+    }
   }
 </style>

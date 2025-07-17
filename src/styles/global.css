@@ -10,24 +10,7 @@ body {
 
   background: #fff2b7;
 
-  /* background-image: linear-gradient(
-    90deg,
-    hsl(22deg 100% 42%) 0%,
-    hsl(27deg 85% 48%) 11%,
-    hsl(32deg 81% 54%) 23%,
-    hsl(36deg 85% 60%) 32%,
-    hsl(41deg 90% 67%) 40%,
-    hsl(45deg 97% 72%) 47%,
-    hsl(47deg 100% 69%) 54%,
-    hsl(50deg 100% 65%) 61%,
-    hsl(52deg 100% 61%) 67%,
-    hsl(54deg 100% 55%) 73%,
-    hsl(52deg 100% 50%) 79%,
-    hsl(47deg 100% 50%) 84%,
-    hsl(42deg 100% 50%) 90%,
-    hsl(37deg 100% 50%) 95%,
-    hsl(32deg 100% 50%) 100%
-  ); */
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -37,7 +20,7 @@ ul {
 }
 
 * {
-  color: #0f0000;
+  color: #37352f;
 }
 
 h1 {
@@ -49,10 +32,48 @@ h2 {
 }
 
 section {
-  padding: 20px;
+  padding: 40px 20px;
 }
 
 .section-content {
-  width: min(800px, 100%);
-  margin: 10px auto;
+  width: min(800px, 90%);
+  margin: 0 auto;
+}
+
+.shine-button {
+  display: block;
+  margin-inline: auto;
+
+  padding: 15px 30px;
+  font-size: 16px;
+  color: white;
+  background: linear-gradient(135deg, #ff7809, #ef521e);
+
+  text-decoration: none;
+  max-width: max-content;
+  font-weight: 600;
+
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+
+  animation: pulse 2s infinite;
+  transition: transform 0.2s ease;
+}
+
+.shine-button:hover {
+  transform: scale(1.05);
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 10px #ff7809;
+  }
+  50% {
+    box-shadow: 0 0 20px #ee470f;
+  }
 }

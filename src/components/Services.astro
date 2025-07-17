@@ -3,19 +3,21 @@ import Plane from "./icons/Plane.astro";
 import Study from "./icons/Study.astro";
 import Group from "./icons/Group.astro";
 import Book from "./icons/Book.astro";
+import ShinyButton from "./ShinyButton.astro";
+
+const { href = "#contact" } = Astro.props;
 ---
 
 <section>
   <div class="section-content">
     <h2>Занятия</h2>
     <p>
-      Все уроки проходят онлайн в Zoom или Google Meet. Я предоставлю все нужные
-      материалы в цифровом формате.
+      Все уроки проходят онлайн в Zoom или Google Meet. Стоимость одного урока
+      (60 минут) - 24€, при оплате сразу 10 занятий — 210€. Оплата занятий
+      возможна через банковский перевод как из России, так и других стран. Я
+      предоставлю все нужные материалы в цифровом формате.
     </p>
-    <p>
-      Стоимость одного урока (60 минут) - 22€. При оплате сразу 10 занятий —
-      200€.
-    </p>
+
     <div class="services-list">
       <div class="service-item">
         <h3><Book />Индивидуальные занятия</h3>
@@ -50,31 +52,38 @@ import Book from "./icons/Book.astro";
         </p>
       </div>
     </div>
+
+    <style>
+      .services-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        gap: 15px;
+      }
+
+      @media (max-width: 768px) {
+        .services-list {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      .service-item {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .service-item:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      h3 {
+        display: flex;
+        gap: 10px;
+      }
+    </style>
   </div>
-
-  <style>
-    .services-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(300px, 1fr));
-      gap: 15px;
-    }
-
-    .service-item {
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-    }
-
-    .service-item:hover {
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    }
-
-    h3 {
-      display: flex;
-      gap: 10px;
-    }
-  </style>
 </section>
