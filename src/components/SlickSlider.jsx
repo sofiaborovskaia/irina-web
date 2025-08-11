@@ -26,10 +26,12 @@ const reviews = [
 ];
 
 function SlickSlider() {
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+
   const settings = {
-    dots: true,
+    dots: !isMobile,
     infinite: true,
-    speed: 700,
+    speed: isMobile ? 500 : 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
@@ -40,9 +42,8 @@ function SlickSlider() {
         <div>
           <div class="review" key={i}>
             <p>
-              <span class="quote quote__open">❝</span>
+              <span class="quote">❝</span>
               {review.text}
-              {/* <span class="quote quote__close">»</span> */}
             </p>
             <p>
               <strong>{review.name}</strong>

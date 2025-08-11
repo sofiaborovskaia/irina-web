@@ -84,12 +84,5 @@ section {
 .quote {
   font-size: 3rem;
   line-height: 0;
-}
-
-.quote__open {
   margin-right: 1rem;
-}
-.quote__close {
-  margin-left: 1rem;
-  vertical-align: middle;
 }
