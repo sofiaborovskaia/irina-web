@@ -21,6 +21,7 @@ ul {
 
 * {
   color: #37352f;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -29,6 +30,10 @@ h1 {
 
 h2 {
   margin-top: 0;
+
+  @media (max-width: 600px) {
+    text-align: center;
+  }
 }
 
 section {
@@ -36,8 +41,12 @@ section {
 }
 
 .section-content {
-  width: min(800px, 90%);
+  max-width: 800px;
   margin: 0 auto;
+}
+
+.centered {
+  text-align: center;
 }
 
 .shine-button {
@@ -64,6 +73,7 @@ section {
 .shine-button:hover {
   transform: scale(1.05);
 }
+
 .mb-0 {
   margin-bottom: 0;
 }
