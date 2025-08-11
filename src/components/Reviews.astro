@@ -1,29 +1,16 @@
+---
+import SlickSlider from "./SlickSlider.jsx";
+---
+
 <section>
   <div class="section-content">
     <h2 class="centered">Отзывы моих учеников</h2>
-    <div class="reviews">
-      <div class="review">
-        <p>
-          "Занятия с Ириной — это всегда интересно и познавательно! Я
-          значительно улучшил свой испанский и теперь чувствую себя уверенно в
-          путешествиях."
-        </p>
-        <p><strong>Алексей, Москва</strong></p>
-      </div>
-      <div class="review">
-        <p>
-          "Ирина — отличный преподаватель! Она помогает мне подготовиться к
-          экзамену DELE, и я чувствую, что готова к нему на все 100%."
-        </p>
-        <p><strong>Мария, Санкт-Петербург</strong></p>
-      </div>
-      <div class="review">
-        <p>
-          "Ирина — отличный преподаватель! Она помогает мне подготовиться к
-          экзамену DELE, и я чувствую, что готова к нему на все 100%."
-        </p>
-        <p><strong>Мария, Санкт-Петербург</strong></p>
-      </div>
-    </div>
+    <SlickSlider client:only="react" />
   </div>
 </section>
+
+<style>
+  .section-content {
+    margin-bottom: 40px;
+  }
+</style>
